@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #2e8b57;
+        }
+        #fact {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3cb371;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crocodile Fun Facts</h1>
+    <div id="fact">Click the button to see a fun fact!</div>
+    <button id="factButton">Show Random Fact</button>
+
+    <script>
+        const crocodileFacts = [
+            { "fact": "Crocodiles can live for over 70 years in the wild." },
+            { "fact": "They have the strongest bite of any animal, with a bite force of over 3,700 pounds per square inch." },
+            { "fact": "Crocodiles are more closely related to birds than they are to lizards." },
+            { "fact": "They can hold their breath underwater for up to an hour while waiting for prey." },
+            { "fact": "Crocodiles have a special valve in their throat that allows them to open their mouths underwater without drowning." },
+            { "fact": "They are ectothermic, meaning their body temperature is regulated by the environment." },
+            { "fact": "Crocodiles can run up to 15 miles per hour on land for short distances." },
+            { "fact": "They have excellent night vision, allowing them to hunt effectively in the dark." },
+            { "fact": "Crocodiles communicate through a variety of vocalizations, including growls, hisses, and bellows." },
+            { "fact": "Some species of crocodiles can swim at speeds of up to 20 miles per hour." }
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * crocodileFacts.length);
+            document.getElementById('fact').innerText = crocodileFacts[randomIndex].fact;
+        });
+    </script>
+</body>
+</html>
